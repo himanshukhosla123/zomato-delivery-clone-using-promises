@@ -1,0 +1,128 @@
+html,body{
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.disclaimer-cont{
+    background-color: red;
+}
+
+.disclaimer{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+
+    /* animation properties */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    animation: my-animation 15s linear infinite;
+}
+  
+  /* for Firefox */
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+}
+
+.header{
+    background-color: #4FA537;
+}
+#currentStatus{
+    color: white;
+    font-size: 28px;
+    padding: 24px 0 8px;
+    text-align: center;
+    font-weight: bold;
+}
+.statuses{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+.badge{
+    background-color: #5bc03f;
+    font-weight: bold;
+    padding: 4px 16px;
+    border-radius: 4px;
+    margin: 10px;
+    display: inline-flex;
+    color:white;
+    border: 1px solid rgba(255,255,255,0.75);
+}
+#status-time{
+    animation: blinking 2s linear infinite;
+}
+@keyframes blinking {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+.mapview{
+    height: 280px;
+    width: 100%;
+    background-color: grey;
+}
+.mapview img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .5;
+}
+
+#driver-details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+    background-color: white;
+}
+.driver-photo,.call{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    object-fit: cover;
+}
+.call{
+    height: 32px;
+    width: 32px;
+}
+.driver-status{
+    padding: 16px;
+    flex:1;
+}
+.driver-into{
+    font-size: 18px;
+    font-weight: 600;
+}
+.driver-msg{
+    padding-top:2px;
+    font-size: 14px;
+}
+.none{
+    display: none;
+}
+
+button{
+    padding: 8px;
+    margin: 0 10px;
+}
